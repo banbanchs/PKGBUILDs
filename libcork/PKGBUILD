@@ -2,14 +2,14 @@
 
 pkgname=libcork
 pkgver=0.12.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple, easily embeddable cross-platform C library"
 arch=('i686' 'x86_64')
 url="https://github.com/redjack/libcork"
 license=('BSD')
 groups=()
 depends=('pkg-config' 'check')
-makedepends=()
+makedepends=('cmake')
 optdepends=()
 provides=()
 conflicts=()
