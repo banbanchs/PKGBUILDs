@@ -3,7 +3,7 @@
 pkgname=chinadns-c
 pkgver=1.3.0
 pkgrel=1
-pkgdesc="Fix weird things with DNS in China."
+pkgdesc="Protect yourself against DNS poisoning in China."
 url="https://github.com/clowwindy/ChinaDNS"
 arch=("i686" "x86_64")
 license=("MIT")
