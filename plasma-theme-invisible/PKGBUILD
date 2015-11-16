@@ -1,3 +1,4 @@
+#Maintainer: banbanchs <memory.silentvoyage[at]gmail.com>
 #Contributor Pafrape <pafrape@free.fr>
 
 pkgname=plasma-theme-invisible
@@ -11,7 +12,7 @@ depends=('kdelibs' 'kdebase-workspace')
 url="http://kde-look.org/content/show.php/Invisible?content=164089"
 depends=('kdelibs' 'kdebase-workspace')
 source=(http://kde-look.org/CONTENT/content-files/164089-$_themename.tar.gz)
-md5sums='bf1b96afb7e10b7a7b20810559b906e2'
+sha256sums='7b2a4687402b00d2b9e7010bcf34a78cbf7b6b4de1c60ff72385d8877f9cc45f'
 
 package() {
 
