@@ -1,0 +1,12 @@
+---
+language: bash
+
+addons:
+  apt:
+    packages:
+    - jq
+    - curl
+    - grep
+    - sed
+
+script: bash ./check-update.sh
