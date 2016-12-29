@@ -1,0 +1,30 @@
+# Maintainer: banbanchs <memory.silentvoyage@gmail.com>
+
+pkgname=frp-bin
+_pkgname=frp
+pkgver=0.9.1
+pkgrel=1
+pkgdesc="A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet."
+url="https://github.com/fatedier/frp"
+license=("Apache")
+arch=("i686" "x86_64")
+provides=("frp")
+conflicts=("frp" "frp-git")
+depends=("glibc")
+source_i686=("https://github.com/fatedier/frp/releases/download/v${pkgver}/${_pkgname}_${pkgver}_linux_386.tar.gz")
+source_x86_64=("https://github.com/fatedier/frp/releases/download/v${pkgver}/${_pkgname}_${pkgver}_linux_amd64.tar.gz")
+sha256sums_i686=('0fb44e42bb440e13939d5bdb35a5f52105ec845d9b2afd7ab0627972e37949ed')
+sha256sums_x86_64=('7456085f2fb91fbf2c7f5bf4f9f212663d590c876b8d402537ae98d448524c07')
+
+package() {
+  cd "${srcdir}/${_pkgname}_${pkgver}_linux_amd64"
+
+  mkdir -p "${pkgdir}/etc/${_pkgname}"
+
+  for bin in "frpc" "frps"; do
+      install -Dm755 "${bin}" "${pkgdir}/usr/bin/${bin}"
+      install -Dm644 "${bin}.ini" "${pkgdir}/etc/${_pkgname}/${bin}.ini"
+      install -Dm644 "${bin}_min.ini" "${pkgdir}/etc/${_pkgname}/${bin}_min.ini"
+  done
+}
+
