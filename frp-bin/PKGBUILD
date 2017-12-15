@@ -2,7 +2,7 @@
 
 pkgname=frp-bin
 _pkgname=frp
-pkgver=0.14.0
+pkgver=0.14.1
 pkgrel=1
 pkgdesc="A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet."
 url="https://github.com/fatedier/frp"
@@ -13,8 +13,8 @@ conflicts=("frp" "frp-git")
 depends=("glibc")
 source_i686=("https://github.com/fatedier/frp/releases/download/v${pkgver}/${_pkgname}_${pkgver}_linux_386.tar.gz")
 source_x86_64=("https://github.com/fatedier/frp/releases/download/v${pkgver}/${_pkgname}_${pkgver}_linux_amd64.tar.gz")
-sha256sums_i686=('8bf5236409081d862b6a0da265e8655bd02635411f6fc918ad29022e5d7926b4')
-sha256sums_x86_64=('58613aa1474610ec53812bf7efa5f69dfcd3dc8d973bd666c5c828240805436a')
+sha256sums_i686=('58b2ee518658cbc6a4b6c6a9ceddbad821e5e87121f85752a9bdaf1e36e654ce')
+sha256sums_x86_64=('f11d48d6d6a22595386a636e1c85e2474fefda07b1059e0ddeed92510c9a9403')
 
 package() {
   cd "${srcdir}/${_pkgname}_${pkgver}_linux_amd64"
