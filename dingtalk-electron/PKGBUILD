@@ -2,7 +2,7 @@
 # Contributor: Jingrong Chen <crazyboycjr at gmail dot com>
 pkgname=dingtalk-electron
 _pkgname=${pkgname//-/_}
-pkgver=2.0.4
+pkgver=2.0.5
 pkgrel=1
 pkgdesc="钉钉Linux版本"
 arch=('x86_64')
@@ -10,7 +10,7 @@ url="https://github.com/nashaofu/dingtalk"
 license=('MIT')
 depends=('gconf' 'libnotify' 'libappindicator-sharp' 'libxtst' 'nss' 'libxss')
 source=("https://github.com/nashaofu/dingtalk/releases/download/v${pkgver}/dingtalk_${pkgver}_amd64.deb")
-sha256sums=('d92af52e04ac817a283b5f42776c22a3c145c1b5bda388b7974bc71fe3ea4078')
+sha256sums=('82d65e1739a08e3bd61d0d3fcee1a8dfc4b5bf3754749b2ca15197ee5f8bd8ae')
 
 package() {
 	tar xJvf data.tar.xz -C "${pkgdir}"
