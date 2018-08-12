@@ -4,7 +4,6 @@ language: bash
 addons:
   apt:
     packages:
-    - jq
     - curl
     - grep
     - sed
