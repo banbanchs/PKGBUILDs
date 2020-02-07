@@ -8,7 +8,7 @@ check () {
         echo "Checking $folder"
         eval $(egrep "url=\"https://github.com|pkgname=|pkgver=" ./$folder/PKGBUILD)
         repo=$(echo $url | sed 's|https://github.com/||g')
-        newest_tag=$(curl -sL "https://api.github.com/repos/$repo/tags?access_token=$token" | jq ".[0]")
+        newest_tag=$(curl -sL -H "Authorization: token $token" "https://api.github.com/repos/$repo/tags" | jq ".[0]")
         github_tag=$(echo $newest_tag | jq .name | tr -d '"v')
 
         if [[ $github_tag == $pkgver ]]; then
