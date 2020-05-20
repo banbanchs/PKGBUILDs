@@ -1,0 +1,19 @@
+# Maintainer: sdvcrx <memory.silentvoyage@gmail.com>
+
+pkgname=migrate-bin
+_pkgname=migrate
+pkgver=4.11.0
+pkgrel=1
+pkgdesc="Database migrations."
+url="https://github.com/golang-migrate/migrate"
+license=("Apache")
+arch=("i686" "x86_64")
+provides=("migrate")
+conflicts=("migrate" "migrate-git")
+depends=("glibc")
+source_x86_64=("https://github.com/golang-migrate/migrate/releases/download/v${pkgver}/${_pkgname}.linux-amd64.tar.gz")
+sha256sums_x86_64=('9b39a0fe0e4dd1d6d3f0705f938a89c9d98c31152e0f097bb2e1556f9030387c')
+
+package() {
+  install -Dm755 "${srcdir}/${_pkgname}.linux-amd64" "${pkgdir}/usr/bin/${_pkgname}"
+}
