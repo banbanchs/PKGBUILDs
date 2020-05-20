@@ -25,5 +25,5 @@ check () {
     return $counter
 }
 
-check "jid-bin" "libcork" "libcstl" "dingtalk-electron" "clash-bin"
+check "jid-bin" "libcstl" "dingtalk-electron"
 
