@@ -2,7 +2,7 @@
 
 pkgname=migrate-bin
 _pkgname=migrate
-pkgver=4.12.2
+pkgver=4.13.0
 pkgrel=1
 pkgdesc="Database migrations."
 url="https://github.com/golang-migrate/migrate"
@@ -12,7 +12,7 @@ provides=("migrate")
 conflicts=("migrate" "migrate-git")
 depends=("glibc")
 source_x86_64=("https://github.com/golang-migrate/migrate/releases/download/v${pkgver}/${_pkgname}.linux-amd64.tar.gz")
-sha256sums_x86_64=('e4d66ada9e98cd502b5ba9c467d641ecbc7a7ba5a8d1e92051aacdcbc10528f0')
+sha256sums_x86_64=('687db12b6b2a3556ef053dec4e200c0a2df6ebc0196abcf5f918c7540efd30ed')
 
 package() {
   install -Dm755 "${srcdir}/${_pkgname}.linux-amd64" "${pkgdir}/usr/bin/${_pkgname}"
